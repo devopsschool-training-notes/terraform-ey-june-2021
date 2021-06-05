@@ -1,0 +1,234 @@
+1234567890
+=============================================
+Rajesh Kumar
+============================
+Start Time - 10:AM
+End - 6PM
+---------------
+Lunch - 1 - 2 PM
+BREAK - 
+	20 mins @ 11:00 AM
+		@ 3.30 AM
+=======================================
+DEMO - I have env
+LAB - You have it.
+=======================================
+===============================================================================
+TOOLS -
+	Cloud 	- Azure - AWS
+		- Ansible 
+		- Azure DevOps
+		- AKS
+		
+What is Terraform?
+	- Coding for Infra - Infra as a Code
+	- is having ONE programming LANG which can code ENTIRE INFRA TOOLS (Call it providers)
+	- Written in Go
+	- From Hashicorp
+		vagrant -> Terraform -> Packer -> Nomad -> Consult - Vault
+	- Release
+		Open Source - CMD --- FREE - COMMUNITY
+		Enterprise - CMD + GUI - PAID -
+Why Terrfrom?
+-------------------------------------------------
+What is the prb in INFRA
+-----------------------------------
+DevOps
+	- DevOps is coding for a PRODUCT	- NO - DEV
+	- DevOps is coding for a TESTING a PRODUCT - NO - QA
+	- DevOps is coding for a INFRA		- NO - OPS/IT
+===========================================================
+https://www.devopsschool.com/lms/course/view.php?id=101
+	
+	Objective
+	- Immediate release
+	- Quality release
+	- Cost Reduction
+
+Coding for Infra --> Automation --> Everything to integ together.
+===================================================================
+What Tools you have in infra.
+-----------------------------------------------------------
+https://devopsschool.com/path/
+SDLC
+-------------------------
+ARCH	DEV		DEV	BR    DEV   BR	   BR 		QA	  QA     Mgr ---> 
+			 			AUTO
+						is CALLED CI
+		|------------------------------------------------------------------|
+PLAN -> CODING -> Analyse -> Build -> UT -> Pack -> Archive -> Deploy2QA -> AT -> CC
+
+							- IF ALL PASS -> Release
+							- IF ONE FAIL -> Repeat
+======================================================================================
+JIRA -> GIT   -> SONARQUBE ->Maven -> Junit -> Jar -> Nexus -> Ansible -> Sele --> jacoco
+==============================================================================================
+					Jenkins	
+==============================================================================================
+
+Setting up DEV ENV -> 	Setting Up QA 	--> 	Setting up PROD
+=========================================================
+CReate 1 VM		CReate 5 VM		CReate 50 VM
+---------------------------------------------------------
+Install PRE		Install PRE in 5vm	Install PRE in 50X
+RUN 1 SCRIPT		RUN 1 SCRIPT in 5VM	RUN 1 SCRIPT in 50VM
+Deploy App in 1vm	Deploy App in 5vm	Deploy App in 50vm
+START TESTING		START TESTING		START MONITORING
+VALIDATE TESTING	VALIDATE TESTING	VALIDATE RELEASE
+DESTROY			DESTROY			UPGRADE with new Release
+============================================================================
+CReate 1 VM = AWS + AZURE + VMware + 
+Install PRE == BASH - PS - PYTHON - APT - YUM - THIS
+			JDK -> TOMCAT -> DB + APP
+Deploy App = Ansible - Chef - Puppet - cfine
+START TESTING = CALLING UR TEST TOOLS
+VALIDATE TESTING == LOCAL UR DOING SOMETHING IN UR LAPTOP
+DESTROY
+======================================
+CREATE  ----> UPDATE ---> CHECK --> Destroy
+==============================================
+		LOOP
+
+
+How to automate EVERY TOOLS in INFRA USING????
+		ONE PROGRAMMING LANGAUGE
+
+=====================================================================================
+Terraform Arch? How it works??Terraform?
+
+Human --> HCF -> Terraform --> PROVIDERS --> API --> TOOLS/PLATFORM ==> STATE
+==============================================================================
+		
+         
+Terminology in Terraform?
+========================================
+HCF
+	Hashicorp config lang
+		- Easy to write
+		- Easy to troubleshoot
+		- Easy to share
+-----------------------------------------------
+	File Name - .tf (MUST) be
+	ONE DIRECTORY === ONE PROJECT	======= ROOT MODULE (DISCUSS LATER)
+				1.tf 	PART OF THE CODE
+				2.tf	PART OF THE CODE
+				3.tf	PART OF THE CODE
+				=========
+				Considered ONE PROJECT
+	.tf contains
+	=====================================
+	Provider1
+		Provisinor	[ DISCUSS LATER ] 
+		Resource1
+			Variables
+			Provisinor [ DISCUSS LATER ]
+			Attributes [ DISCUSS LATER ]
+			Argument1 
+			Argument2 
+		Resource2
+			Argument1 
+			Argument2 
+	Provider2
+		Resource1
+			Argument1 
+			Argument2 
+		Resource2
+			Argument1 
+			Argument2 
+	Provider2
+		Resource1
+			Argument1 
+			Argument2 
+		Resource2
+			Argument1 
+			Argument2 
+	Variables
+	
+
+
+Terraform
+	Tool which need to be install @Workstation.
+	Support all PLATFORM
+
+PROVIDER
+	https://registry.terraform.io/browse/providers
+
+	AWS(PROVIDER)
+			Resource(Ec2)
+					Parameter1 AKA Argument 
+								Required | Optional
+					Parameter2 AKA Argument 
+								Required | Optional
+					Parameter3 AKA Argument
+								Required | Optional
+	AZURE(PROVIDER)
+			Resource(VM)
+					Parameter1 AKA Argument
+								Required | Optional
+					Parameter2 AKA Argument
+					Parameter3 AKA Argument
+	Github	
+			repo
+					nameoftherepo AKA Argument
+
+==================================================================================================================
+Basic Workflow in terraform
+================================
+INIT		=> 	PLAN		==> APPLY			==> Destroy
+
+
+-----------------------
+terraform init
+	- Download Providers & Modules
+terraform plan
+	- DRY RUN
+terraform apply
+	- Create a resources &&& store a resonse IN STATE file(json)
+terraform destroy
+	- Destroy a resources using STATE file(json)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Advance Workflow in Terraform
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
