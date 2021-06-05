@@ -178,20 +178,57 @@ INIT		=> 	PLAN		==> APPLY			==> Destroy
 
 
 -----------------------
-terraform init
+$ terraform init
 	- Download Providers & Modules
-terraform plan
+$ terraform validate
+	- Validate .tf profile
+$ terraform plan
 	- DRY RUN
-terraform apply
+$ terraform apply
 	- Create a resources &&& store a resonse IN STATE file(json)
-terraform destroy
+$ terraform destroy
 	- Destroy a resources using STATE file(json)
+=============================================================
+ONE IN AWS
+https://www.devopsschool.com/blog/working-with-terraform-aws-provider-resources-aws_key_pair/
+
+ONE IN AZURE
+https://docs.microsoft.com/en-us/azure/developer/terraform/create-linux-virtual-machine-with-infrastructure
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======================
+Create our terraform file
+Create the AzureRM provider in terraform
+Define the Azure resource group
+Define a virtual network and subnet
+Define a new public IP address
+Create Network Security Group
+Define a Network Interface for our VM
+Define the Virtual Machine
+Build the Virtual Machine
+The whole file in one
+=======================
+https://docs.microsoft.com/en-us/azure/developer/terraform/create-linux-virtual-machine-with-infrastructure
 
 
 
